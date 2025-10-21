@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Modelo unificado para todos los puntos de interés y ferias
+model Punto {
+  id          Int       @id @default(autoincrement())
+  nombre      String
+  descripcion String?
+  latitud     Float
+  longitud    Float
+  categoria   Categoria // Usamos un Enum para las categorías
+  creadoEn    DateTime  @default(now())
+}
+
+enum Categoria {
+  FERIA
+  MUSEO
+  GOBIERNO
+  ESTADIO
+  MONUMENTO
+}

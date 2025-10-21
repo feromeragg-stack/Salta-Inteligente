@@ -1,0 +1,9 @@
+-- CreateTable
+CREATE TABLE "Feria" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "nombre" TEXT NOT NULL,
+    "descripcion" TEXT,
+    "latitud" REAL NOT NULL,
+    "longitud" REAL NOT NULL,
+    "creadoEn" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

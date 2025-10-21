@@ -1,0 +1,40 @@
+/* IA-PROMPT:
+Crea estilos para el componente Header:
+- Dale a la clase `.header` un fondo oscuro, texto blanco, y padding.
+- Centra el texto del `h1` y dale un tamaño de fuente adecuado.
+- Añade un sutil `box-shadow` en la parte inferior.
+*/
+
+.header {
+  background-color: #282c34;
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}

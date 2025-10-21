@@ -1,0 +1,35 @@
+{
+  "name": "salta-inteligente",
+  "version": "1.0.0",
+  "description": "Dashboard Cívico para la Ciudad de Salta, Argentina",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client && npm run build --prefix server",
+    "start": "npm start --prefix server",
+    "setup": "npm run install:all && npm run db:setup",
+    "db:setup": "npm run db:migrate --prefix server && npm run db:generate --prefix server",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "salta",
+    "civic-dashboard",
+    "argentina",
+    "react",
+    "nodejs",
+    "typescript",
+    "prisma",
+    "leaflet"
+  ],
+  "author": "Fernando J. Romera Costa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feromeragg-stack/salta-inteligente.git"
+  },
+  "homepage": "https://github.com/feromeragg-stack/salta-inteligente#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

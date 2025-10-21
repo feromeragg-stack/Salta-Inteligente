@@ -1,0 +1,163 @@
+# ===========================# Dependencies
+
+# Node.js Dependenciesnode_modules/
+
+# ===========================**/node_modules/
+
+node_modules/
+
+**/node_modules/# Build outputs
+
+npm-debug.log*dist/
+
+yarn-debug.log*build/
+
+yarn-error.log***/dist/
+
+pnpm-debug.log***/build/
+
+lerna-debug.log*
+
+# Environment variables
+
+# ===========================.env
+
+# Environment Variables.env.local
+
+# ===========================.env.development.local
+
+.env.env.test.local
+
+.env.local.env.production.local
+
+.env.development.local
+
+.env.test.local# Logs
+
+.env.production.localnpm-debug.log*
+
+.env.stagingyarn-debug.log*
+
+yarn-error.log*
+
+# ===========================lerna-debug.log*
+
+# Build Outputs
+
+# ===========================# Runtime data
+
+dist/pids
+
+build/*.pid
+
+**/dist/*.seed
+
+**/build/*.pid.lock
+
+out/
+
+.next/# Coverage directory used by tools like istanbul
+
+.nuxt/coverage/
+
+.cache/*.lcov
+
+.parcel-cache/
+
+*.tsbuildinfo# nyc test coverage
+
+.turbo.nyc_output
+
+
+
+# ===========================# Database
+
+# Database Files*.db
+
+# ===========================*.db-journal
+
+*.db*.sqlite
+
+*.db-journal*.sqlite3
+
+*.sqliteserver/prisma/dev.db
+
+*.sqlite3server/prisma/dev.db-journal
+
+server/prisma/dev.db
+
+server/prisma/dev.db-journal# IDEs and editors
+
+.vscode/
+
+# ===========================.idea/
+
+# Logs & Runtime*.swp
+
+# ===========================*.swo
+
+logs/*~
+
+*.log
+
+pids/# OS generated files
+
+*.pid.DS_Store
+
+*.seed.DS_Store?
+
+*.pid.lock._*
+
+.npm/.Spotlight-V100
+
+.eslintcache.Trashes
+
+.stylelintcacheehthumbs.db
+
+Thumbs.db
+
+# ===========================
+
+# Coverage & Testing# Prisma
+
+# ===========================.env
+
+coverage/prisma/migrations/
+*.lcov
+.nyc_output/
+.coverage/
+
+# ===========================
+# IDEs & Editors
+# ===========================
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ===========================
+# OS Generated Files
+# ===========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ===========================
+# Prisma
+# ===========================
+prisma/migrations/*/migration.sql.backup
+
+# ===========================
+# Assets (keeping screenshots for README)
+# ===========================
+# Uncomment if you want to ignore large assets
+# assets/*.png
+# assets/*.jpg
