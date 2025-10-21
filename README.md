@@ -21,7 +21,10 @@
 ## 📸 Vista Previa del Proyecto
 
 <p align="center">
-  <img src="./assets/screenshot-mapa.png" alt="Mapa Interactivo de Salta - Vista del dashboard cívico mostrando puntos de interés categorizados" width="800">
+  <img width="1338" height="785" alt="Captura_de_pantalla_2025-10-21_160925" src="https://github.com/user-attachments/assets/9a9071da-f9ff-470a-bdc4-eb0ec36dfc14" />
+
+
+">
 </p>
 
 *Mapa interactivo mostrando los puntos de interés de Salta con categorización visual y popups informativos*
@@ -335,7 +338,7 @@ Este proyecto está licenciado bajo la **Licencia MIT** - ver el archivo [LICENS
 
 - 💼 **LinkedIn**: [fernando-romera-033558384](https://www.linkedin.com/in/fernando-romera-033558384/)
 - 🐙 **GitHub**: [@feromeragg-stack](https://github.com/feromeragg-stack)
-- 📧 **Email**: [contacto disponible en LinkedIn]
+- 📧 **Email**: [feromeragg@gmail.com]
 - 🌐 **Proyecto**: [Salta-Inteligente](https://github.com/feromeragg-stack/salta-inteligente)
 
 ---
@@ -343,8 +346,6 @@ Este proyecto está licenciado bajo la **Licencia MIT** - ver el archivo [LICENS
 ## 🙏 Agradecimientos
 
 - 🏛️ **Ciudad de Salta** por inspirar este proyecto
-- 🇦🇷 **Comunidad de desarrolladores de Argentina**
-- 🌟 **Contribuidores** que hacen posible este proyecto
 - 📚 **Comunidad open source** por las increíbles herramientas
 
 ---
