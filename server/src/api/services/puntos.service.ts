@@ -49,10 +49,10 @@ export const getPuntosPorCategoriaService = async (categoria: Categoria) => {
  */
 
 /**
- * Obtener solo las ferias (puntos con categoría FERIA)
+ * Obtener solo los puntos verdes (puntos con categoría PUNTO_VERDE)
  */
 export const getAllFeriasService = async () => {
-  return await getPuntosPorCategoriaService('FERIA' as Categoria);
+  return await getPuntosPorCategoriaService('PUNTO_VERDE' as Categoria);
 };
 
 /**
@@ -63,7 +63,7 @@ export const getAllPuntosInteresService = async () => {
     const puntos = await prisma.punto.findMany({
       where: {
         categoria: {
-          not: 'FERIA'
+          not: 'PUNTO_VERDE'
         }
       },
       orderBy: {

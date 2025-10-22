@@ -8,7 +8,7 @@ import styles from "./Header.module.css";
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <h1>Salta-Inteligente: Mapa Digital de Act.</h1>
+      <h1>Green-Flag🟩</h1>
     </header>
   );
 };

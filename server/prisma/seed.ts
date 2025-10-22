@@ -1,132 +1,73 @@
 import { PrismaClient, Categoria } from '@prisma/client';
 
-// Crear una instancia de PrismaClient para el seeding
 const prisma = new PrismaClient();
 
-/**
- * Función principal de seeding
- * Inserta puntos de interés mezclados (ferias, museos, gobiernos, estadios, monumentos) de Salta
- */
+// Nota de Mentor: Hemos reemplazado los datos antiguos con 6 "Puntos Verdes"
+// de compostaje, con descripciones que educan al usuario sobre su importancia.
+// Las coordenadas son de lugares reales en Salta para darle realismo.
+const puntosVerdes = [
+  {
+    nombre: 'Punto Composta: Parque San Martín',
+    descripcion: 'Centro de compostaje comunitario. Trae tus residuos orgánicos (restos de frutas, verduras, yerba) y contribuye a generar abono natural para nuestras plazas.',
+    latitud: -24.795,
+    longitud: -65.410,
+    categoria: Categoria.COMPOSTA,
+  },
+  {
+    nombre: 'Punto Composta: Plaza Alvarado',
+    descripcion: 'Iniciativa vecinal de compostaje. Aprende a transformar tus residuos en tierra fértil. Aceptamos restos de poda y orgánicos de cocina.',
+    latitud: -24.801,
+    longitud: -65.418,
+    categoria: Categoria.COMPOSTA,
+  },
+  {
+    nombre: 'Punto Composta: Parque del Bicentenario',
+    descripcion: 'Aquí tus orgánicos se convierten en vida. Ayúdanos a reducir los desechos que van al vertedero y a crear un ecosistema más sano.',
+    latitud: -24.755,
+    longitud: -65.435,
+    categoria: Categoria.COMPOSTA,
+  },
+  {
+    nombre: 'Punto Composta: Plaza 9 de Julio',
+    descripcion: 'En el corazón de la ciudad, un espacio para tus residuos orgánicos. Fomentamos la economía circular y el cuidado del medio ambiente.',
+    latitud: -24.789,
+    longitud: -65.411,
+    categoria: Categoria.COMPOSTA,
+  },
+  {
+    nombre: 'Punto Composta: Monumento 20 de Febrero',
+    descripcion: 'Junto a nuestro patrimonio, cuidamos nuestro futuro. Deposita aquí tus restos de frutas y verduras para apoyar los jardines locales.',
+    latitud: -24.782,
+    longitud: -65.422,
+    categoria: Categoria.COMPOSTA,
+  },
+  {
+    nombre: 'Punto Composta: Plaza Güemes',
+    descripcion: 'Pequeñas acciones, grandes cambios. Este punto de compostaje es mantenido por voluntarios. ¡Suma tu aporte a la comunidad!',
+    latitud: -24.783,
+    longitud: -65.407,
+    categoria: Categoria.COMPOSTA,
+  }
+];
+
 async function main() {
-  console.log('🌱 Iniciando seeding de la base de datos...');
-
-  // Insertar puntos de interés mezclados con coordenadas reales de Salta
-  await prisma.punto.createMany({
-    data: [
-      // FERIAS
-      {
-        nombre: 'Feria Artesanal del Cerro San Bernardo',
-        descripcion: 'Feria de artesanías locales con productos tradicionales salteños. Ubicada en la base del teleférico del Cerro San Bernardo.',
-        latitud: -24.7859,
-        longitud: -65.4048,
-        categoria: 'FERIA',
-      },
-      {
-        nombre: 'Mercado San Miguel',
-        descripcion: 'Mercado histórico con productos regionales, especias, y comida típica del norte argentino. Centro de la actividad comercial tradicional.',
-        latitud: -24.7821,
-        longitud: -65.4232,
-        categoria: 'FERIA',
-      },
-      {
-        nombre: 'Feria de la Plaza 9 de Julio',
-        descripcion: 'Feria de emprendedores locales que se instala los fines de semana en la plaza principal. Productos gastronómicos y artesanales.',
-        latitud: -24.7878,
-        longitud: -65.4112,
-        categoria: 'FERIA',
-      },
-
-      // MUSEOS
-      {
-        nombre: 'Museo de Arqueología de Alta Montaña (MAAM)',
-        descripcion: 'Exhibe los Niños del Llullaillaco, uno de los hallazgos arqueológicos más importantes de los últimos tiempos.',
-        latitud: -24.7944,
-        longitud: -65.4109,
-        categoria: 'MUSEO',
-      },
-      {
-        nombre: 'Museo de la Ciudad Casa de Hernández',
-        descripcion: 'Museo dedicado a la historia de Salta ubicado en una casa colonial del siglo XVIII',
-        latitud: -24.7915,
-        longitud: -65.4098,
-        categoria: 'MUSEO',
-      },
-      {
-        nombre: 'Museo Provincial de Bellas Artes',
-        descripcion: 'Importante colección de arte argentino y salteño en el Palacio Usandivaras',
-        latitud: -24.7889,
-        longitud: -65.4125,
-        categoria: 'MUSEO',
-      },
-
-      // GOBIERNO
-      {
-        nombre: 'Casa de Gobierno',
-        descripcion: 'Sede del Poder Ejecutivo de la Provincia de Salta, edificio histórico colonial',
-        latitud: -24.7897,
-        longitud: -65.4103,
-        categoria: 'GOBIERNO',
-      },
-      {
-        nombre: 'Municipalidad de Salta',
-        descripcion: 'Palacio Municipal - Sede del gobierno de la ciudad de Salta',
-        latitud: -24.7922,
-        longitud: -65.4112,
-        categoria: 'GOBIERNO',
-      },
-
-      // ESTADIOS
-      {
-        nombre: 'Estadio Padre Ernesto Martearena',
-        descripcion: 'Principal estadio de fútbol y rugby de la ciudad, sede de eventos deportivos y conciertos.',
-        latitud: -24.8012,
-        longitud: -65.4234,
-        categoria: 'ESTADIO',
-      },
-      {
-        nombre: 'Complejo Deportivo Delmi',
-        descripcion: 'Centro deportivo municipal con múltiples disciplinas',
-        latitud: -24.7723,
-        longitud: -65.4156,
-        categoria: 'ESTADIO',
-      },
-
-      // MONUMENTOS
-      {
-        nombre: 'Catedral Basílica de Salta',
-        descripcion: 'Importante templo católico del siglo XIX, sede del Arzobispado de Salta',
-        latitud: -24.7912,
-        longitud: -65.4106,
-        categoria: 'MONUMENTO',
-      },
-      {
-        nombre: 'Iglesia San Francisco',
-        descripcion: 'Histórica iglesia colonial con torre campanario de 53 metros de altura',
-        latitud: -24.7934,
-        longitud: -65.4087,
-        categoria: 'MONUMENTO',
-      },
-      {
-        nombre: 'Cabildo de Salta',
-        descripcion: 'Histórico edificio colonial del siglo XVIII, hoy Centro Cultural',
-        latitud: -24.7911,
-        longitud: -65.4103,
-        categoria: 'MONUMENTO',
-      },
-    ],
-  });
-
-  console.log('✅ Seeding completado: 13 puntos de interés insertados exitosamente');
+  console.log('Limpiando la base de datos...');
+  await prisma.punto.deleteMany({});
+  
+  console.log('Creando nuevos puntos verdes...');
+  for (const punto of puntosVerdes) {
+    await prisma.punto.create({
+      data: punto,
+    });
+  }
+  console.log('Seeding finalizado.');
 }
 
-// Ejecutar el script de seeding con manejo de errores
 main()
-  .then(async () => {
-    console.log('🎉 Seeding finalizado correctamente');
-    await prisma.$disconnect();
-  })
-  .catch(async (error) => {
-    console.error('❌ Error durante el seeding:', error);
-    await prisma.$disconnect();
+  .catch((e) => {
+    console.error(e);
     process.exit(1);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
   });

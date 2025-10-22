@@ -9,14 +9,14 @@ import 'leaflet/dist/leaflet.css';
  */
 const getCategoriaColor = (categoria: Categoria): string => {
   switch (categoria) {
-    case Categoria.FERIA:
-      return '#ff6b6b'; // Rojo suave
+    case Categoria.PUNTO_VERDE:
+      return '#28a745'; // Verde
     case Categoria.MUSEO:
       return '#4ecdc4'; // Turquesa
     case Categoria.GOBIERNO:
       return '#45b7d1'; // Azul
     case Categoria.ESTADIO:
-      return '#96ceb4'; // Verde
+      return '#96ceb4'; // Verde claro
     case Categoria.MONUMENTO:
       return '#f7b731'; // Amarillo/Dorado
     default:

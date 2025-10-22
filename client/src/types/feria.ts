@@ -2,11 +2,11 @@
  * Enum de categorías de puntos
  */
 export enum Categoria {
-  FERIA = 'FERIA',
-  MUSEO = 'MUSEO',
-  GOBIERNO = 'GOBIERNO',
-  ESTADIO = 'ESTADIO',
-  MONUMENTO = 'MONUMENTO'
+  PUNTO_VERDE = "PUNTO_VERDE",
+  MUSEO = "MUSEO",
+  GOBIERNO = "GOBIERNO",
+  ESTADIO = "ESTADIO",
+  MONUMENTO = "MONUMENTO",
 }
 
 /**
@@ -25,8 +25,8 @@ export interface Punto {
 
 /**
  * Para compatibilidad con código existente
- * Feria es ahora un Punto con categoría FERIA
+ * Feria es ahora un Punto con categoría PUNTO_VERDE
  */
 export interface Feria extends Punto {
-  categoria: Categoria.FERIA;
+  categoria: Categoria.PUNTO_VERDE;
 }

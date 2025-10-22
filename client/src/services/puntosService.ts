@@ -48,17 +48,17 @@ export const fetchPuntosPorCategoria = async (categoria: Categoria): Promise<Pun
  */
 
 /**
- * Obtener solo las ferias (puntos con categoría FERIA)
+ * Obtener solo los puntos verdes (puntos con categoría PUNTO_VERDE)
  */
 export const fetchFerias = async () => {
   const puntos = await fetchPuntos();
-  return puntos.filter(punto => punto.categoria === Categoria.FERIA);
+  return puntos.filter(punto => punto.categoria === Categoria.PUNTO_VERDE);
 };
 
 /**
- * Obtener solo los puntos de interés (todas las categorías excepto FERIA)
+ * Obtener solo los puntos de interés (todas las categorías excepto PUNTO_VERDE)
  */
 export const fetchPuntosInteres = async () => {
   const puntos = await fetchPuntos();
-  return puntos.filter(punto => punto.categoria !== Categoria.FERIA);
+  return puntos.filter(punto => punto.categoria !== Categoria.PUNTO_VERDE);
 };

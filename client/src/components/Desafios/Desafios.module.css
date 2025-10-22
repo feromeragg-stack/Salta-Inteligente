@@ -1,0 +1,70 @@
+/* Nota de Mentor: Estilos para el nuevo componente de desafíos. */
+/* Le damos una apariencia de "tarjeta" moderna y limpia. */
+
+.desafiosContainer {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.tituloPrincipal {
+  margin-top: 0;
+  color: #264653;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.listaDesafios {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.desafioCard {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.desafioCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.iconContainer {
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.textoContainer {
+  flex-grow: 1;
+}
+
+.desafioTitulo {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.desafioDescripcion {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}

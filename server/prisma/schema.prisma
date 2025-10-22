@@ -5,10 +5,17 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// Primary datasource (production / recommended): PostgreSQL via env var
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
+
+// Local fallback (uncomment to use SQLite locally instead of Postgres)
+// datasource db {
+//   provider = "sqlite"
+//   url      = "file:./dev.db"
+// }
 
 // Modelo unificado para todos los puntos de interés y ferias
 model Punto {
@@ -21,10 +28,10 @@ model Punto {
   creadoEn    DateTime  @default(now())
 }
 
+// Nota de Mentor: Hemos pivotado el enum Categoria hacia puntos verdes
+// para alinear el proyecto con la nueva visión ecológica.
 enum Categoria {
-  FERIA
-  MUSEO
-  GOBIERNO
-  ESTADIO
-  MONUMENTO
+  COMPOSTA
+  RECICLAJE
+  HUERTA
 }

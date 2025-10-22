@@ -27,3 +27,31 @@ section h2 {
     font-size: 1.2rem;
   }
 }
+
+/* Nuevo layout principal */
+.titulo-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.main-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.mapa-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.desafios-container {
+}
+
+@media (max-width: 768px) {
+  .main-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
