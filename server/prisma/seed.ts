@@ -47,7 +47,22 @@ const puntosVerdes = [
     latitud: -24.783,
     longitud: -65.407,
     categoria: Categoria.COMPOSTA,
-  }
+  },
+  // --- NUEVOS PUNTOS AÑADIDOS ---
+  {
+    nombre: 'Punto Reciclaje: Estación (Balcarce)',
+    descripcion: 'Centro de recepción de materiales secos. Trae tus plásticos (PET), cartón, vidrio y latas. Ayúdanos a reintroducirlos en la cadena productiva.',
+    latitud: -24.783,
+    longitud: -65.413,
+    categoria: Categoria.RECICLAJE,
+  },
+  {
+    nombre: 'Punto Reciclaje: Grand Bourg',
+    descripcion: 'Iniciativa de "Botellas de Amor". Trae tus ecoladrillos y plásticos de un solo uso para convertirlos en madera plástica.',
+    latitud: -24.799,
+    longitud: -65.445,
+    categoria: Categoria.RECICLAJE,
+  },
 ];
 
 async function main() {
