@@ -28,9 +28,8 @@ const MapaCivico: React.FC = () => {
   // Estado para los filtros de categorías
   const [categoriasSeleccionadas, setCategoriasSeleccionadas] = useState<Categoria[]>([
     Categoria.COMPOSTA, 
-    Categoria.RECICLAJE, 
-    Categoria.HUERTA
-  ]); // Por defecto, mostrar todas las categorías
+    Categoria.RECICLAJE
+  ]); // Por defecto, mostrar ambas categorías
 
   // Función para manejar cambios en los filtros
   const handleCategoriaChange = (categoria: Categoria, seleccionada: boolean) => {

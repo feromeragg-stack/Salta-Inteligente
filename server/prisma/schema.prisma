@@ -24,8 +24,8 @@ model Punto {
 
 // Nota de Mentor: Hemos pivotado el enum Categoria hacia puntos verdes
 // para alinear el proyecto con la nueva visión ecológica.
+// Simplificado a solo 2 categorías principales
 enum Categoria {
   COMPOSTA
   RECICLAJE
-  HUERTA
 }

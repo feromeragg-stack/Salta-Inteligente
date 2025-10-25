@@ -1,11 +1,11 @@
 /**
  * Enum de categorías de puntos - Actualizado para coincidir con PostgreSQL
  * Enfoque en puntos verdes/ecológicos
+ * Simplificado a 2 categorías principales
  */
 export enum Categoria {
   COMPOSTA = "COMPOSTA",
-  RECICLAJE = "RECICLAJE", 
-  HUERTA = "HUERTA",
+  RECICLAJE = "RECICLAJE",
 }
 
 /**

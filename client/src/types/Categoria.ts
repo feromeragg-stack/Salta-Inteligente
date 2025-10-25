@@ -1,11 +1,11 @@
 /**
  * Enum de categorías de puntos ecológicos
  * Sincronizado con el schema de PostgreSQL
+ * Simplificado a 2 categorías principales
  */
 export enum Categoria {
   COMPOSTA = "COMPOSTA",
-  RECICLAJE = "RECICLAJE", 
-  HUERTA = "HUERTA",
+  RECICLAJE = "RECICLAJE",
 }
 
 /**
@@ -14,7 +14,6 @@ export enum Categoria {
 export const CATEGORIA_LABELS: Record<Categoria, string> = {
   [Categoria.COMPOSTA]: 'Puntos de Compostaje',
   [Categoria.RECICLAJE]: 'Puntos de Reciclaje',
-  [Categoria.HUERTA]: 'Huertas Urbanas',
 };
 
 /**
@@ -23,5 +22,4 @@ export const CATEGORIA_LABELS: Record<Categoria, string> = {
 export const CATEGORIA_COLORES: Record<Categoria, string> = {
   [Categoria.COMPOSTA]: '#2a9d8f', // Verde turquesa para compostaje
   [Categoria.RECICLAJE]: '#f77f00', // Naranja para reciclaje
-  [Categoria.HUERTA]: '#6a994e', // Verde natural para huertas
 };
