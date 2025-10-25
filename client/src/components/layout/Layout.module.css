@@ -1,37 +1,73 @@
-/* Layout.module.css */
-/* Estilos para el componente Layout reutilizable */
-
 .layout {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f8f9fa;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Un fondo gris claro para la app */
 }
 
+/* --- Nueva Barra de Navegación --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky; /* Hacemos que la barra quede fija */
+  top: 0;
+  z-index: 1000; /* Nos aseguramos que esté por encima del mapa */
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoIcon {
+  color: #2a9d8f; /* Verde principal */
+  font-size: 1.5rem;
+}
+
+.logoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #264653; /* Azul oscuro */
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #2a9d8f;
+}
+
+/* Estilo para el enlace activo (gracias a NavLink) */
+.navLink.active {
+  color: #2a9d8f;
+  border-bottom-color: #2a9d8f;
+  font-weight: 700;
+}
+
+/* --- Contenido Principal --- */
 .mainContent {
-  flex: 1;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  flex-grow: 1; /* Ocupa el espacio restante */
+  padding: 1.5rem 2rem; /* Añadimos padding general */
   width: 100%;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 1rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .mainContent {
-    padding: 1rem;
-    margin: 0.5rem;
-    border-radius: 4px;
-  }
-}
-
-@media (max-width: 480px) {
-  .mainContent {
-    padding: 0.75rem;
-    margin: 0.25rem;
-  }
+  max-width: 1400px; /* Un ancho máximo para pantallas grandes */
+  margin: 0 auto; /* Centramos el contenido */
+  box-sizing: border-box; /* Importante para que el padding no desborde */
 }

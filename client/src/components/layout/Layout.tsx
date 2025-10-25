@@ -1,25 +1,44 @@
 import React from 'react';
-import Header from './Header';
+// 1. Importamos Outlet y NavLink
+import { Outlet, NavLink } from 'react-router-dom';
 import styles from './Layout.module.css';
+import { FaLeaf } from 'react-icons/fa'; // Usamos un ícono para el logo
 
-/**
- * Interfaz para las props del componente Layout
- */
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-/**
- * Componente Layout reutilizable para Salta-Inteligente
- * Basado en las especificaciones del PROJECT_BRIEFING.md
- * Proporciona una estructura consistente para todas las páginas
- */
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC = () => {
   return (
     <div className={styles.layout}>
-      <Header />
+      {/* 2. Esta es la nueva barra de navegación */}
+      <header className={styles.header}>
+        <div className={styles.logoContainer}>
+          <FaLeaf className={styles.logoIcon} />
+          <span className={styles.logoTitle}>Salta-Verde</span>
+        </div>
+        <nav className={styles.nav}>
+          {/* 3. Usamos NavLink para los enlaces de navegación */}
+          {/* Sabe qué enlace es el "activo" y le aplica la clase 'active' */}
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+            }
+          >
+            Inicio
+          </NavLink>
+          <NavLink
+            to="/desafios"
+            className={({ isActive }) =>
+              isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+            }
+          >
+            Desafíos
+          </NavLink>
+        </nav>
+      </header>
+      
+      {/* 4. Outlet es el "hueco" donde React Router renderizará la página activa */}
+      {/* (HomePage o DesafiosPage) */}
       <main className={styles.mainContent}>
-        {children}
+        <Outlet />
       </main>
     </div>
   );

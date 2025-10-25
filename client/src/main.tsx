@@ -2,6 +2,8 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+// 1. Importamos el Router
+import { BrowserRouter } from 'react-router-dom'
 import App from './App.tsx'
 import './index.css'
 
@@ -22,6 +24,9 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    {/* 2. Envolvemos toda la App en el BrowserRouter */}
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
 )
