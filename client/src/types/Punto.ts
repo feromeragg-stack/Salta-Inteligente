@@ -21,3 +21,11 @@ export interface Punto {
 export interface Feria extends Punto {
   categoria: Categoria.COMPOSTA;
 }
+
+/**
+ * Props para componentes que manejan filtros de puntos
+ */
+export interface FiltrosPuntosProps {
+  categoriasSeleccionadas: Categoria[];
+  onCategoriaChange: (categoria: Categoria, seleccionada: boolean) => void;
+}

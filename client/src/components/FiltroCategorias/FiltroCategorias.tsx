@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './FiltroCategorias.module.css';
 
 // Importamos desde el nuevo archivo de tipos
-import { Categoria, CATEGORIA_LABELS } from '../../types/Categoria';
+import { Categoria, CATEGORIA_LABELS, CATEGORIA_COLORES } from '../../types/Categoria';
 
 // Props del componente
 interface FiltroCategoriasProps {
@@ -42,6 +42,10 @@ const FiltroCategorias: React.FC<FiltroCategoriasProps> = ({
                 className={styles.checkbox}
                 checked={estaSeleccionada}
                 onChange={() => handleCheckboxChange(categoria)}
+              />
+              <span 
+                className={styles.categoriaIndicador}
+                style={{ backgroundColor: CATEGORIA_COLORES[categoria] }}
               />
               {CATEGORIA_LABELS[categoria]}
             </label>
