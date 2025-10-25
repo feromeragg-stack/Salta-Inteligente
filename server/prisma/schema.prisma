@@ -5,11 +5,17 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// Production: PostgreSQL via env var
+// Development: SQLite local (fallback cuando PostgreSQL no esté disponible)
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
+
+// Production: PostgreSQL via env var
+// datasource db {
+//   provider = "postgresql"
+//   url      = env("DATABASE_URL")
+// }
 
 // Modelo unificado para todos los puntos de interés y ferias
 model Punto {
