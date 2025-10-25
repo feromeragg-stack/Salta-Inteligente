@@ -1,0 +1,9 @@
+.desafiosLayout {
+  width: 100%;
+  max-width: 900px; /* Un ancho máximo para la página de desafíos */
+  margin: 0 auto; /* Centramos el contenido */
+}
+
+.desafiosContainer {
+  margin-top: 1.5rem;
+}
