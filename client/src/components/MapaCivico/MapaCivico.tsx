@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Punto } from '../types/Punto';
-import { Categoria, CATEGORIA_COLORES } from '../types/Categoria';
-import { fetchPuntos } from '../services/puntosService';
+import { Punto } from '../../types/Punto';
+import { Categoria, CATEGORIA_COLORES } from '../../types/Categoria';
+import { fetchPuntos } from '../../services/puntosService';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import FiltroCategorias from './FiltroCategorias';
+import FiltroCategorias from '../FiltroCategorias';
 import 'leaflet/dist/leaflet.css';
 
 /**
