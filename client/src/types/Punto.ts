@@ -1,16 +1,8 @@
-/**
- * Enum de categorías de puntos - Actualizado para coincidir con PostgreSQL
- * Enfoque en puntos verdes/ecológicos
- */
-export enum Categoria {
-  COMPOSTA = "COMPOSTA",
-  RECICLAJE = "RECICLAJE", 
-  HUERTA = "HUERTA",
-}
+import { Categoria } from './Categoria';
 
 /**
  * Interfaz para el modelo Punto unificado
- * Representa los datos que vienen desde la API del backend
+ * Representa los puntos ecológicos que vienen desde la API
  */
 export interface Punto {
   id: number;

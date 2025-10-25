@@ -2,6 +2,8 @@
 export type { Feria } from './feria';
 export type { PuntoInteres } from './puntoInteres';
 export { CategoriaPuntoInteres } from './puntoInteres';
+export type { Punto } from './Punto';
+export { Categoria, CATEGORIA_LABELS, CATEGORIA_COLORES } from './Categoria';
 
 // TODO: Aquí se exportarán otros tipos futuros:
 // export type { Evento } from './evento';     // Módulo 2: Agenda Cultural

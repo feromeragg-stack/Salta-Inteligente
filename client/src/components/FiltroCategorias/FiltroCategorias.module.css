@@ -1,0 +1,48 @@
+/* Estilos para el componente de filtros por categoría */
+
+.filtroContainer {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+}
+
+.filtroTitulo {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0c3b2e; /* Un verde oscuro, más alineado a la paleta */
+}
+
+.opcionesContainer {
+  display: flex;
+  flex-direction: column; /* Apilamos las opciones verticalmente */
+  gap: 0.75rem;
+}
+
+.opcionLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+  background-color: #f7f7f7;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  border: 1px solid #eee;
+}
+
+.opcionLabel:hover {
+    background-color: #eafaf4; /* Un verde muy suave al pasar el mouse */
+    border-color: #b8e0d2;
+}
+
+.checkbox {
+  margin-right: 0.6rem;
+  width: 16px;
+  height: 16px;
+  /* Damos un color de acento que coincida con la paleta verde */
+  accent-color: #2a9d8f; 
+}

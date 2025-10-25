@@ -1,27 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Punto, Categoria } from '../types/feria';
+import { Punto } from '../types/Punto';
+import { Categoria, CATEGORIA_COLORES } from '../types/Categoria';
 import { fetchPuntos } from '../services/puntosService';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 /**
  * Función helper para obtener color según la categoría
+ * Utiliza los colores definidos en tipos centralizados
  */
 const getCategoriaColor = (categoria: Categoria): string => {
-  switch (categoria) {
-    case Categoria.PUNTO_VERDE:
-      return '#28a745'; // Verde
-    case Categoria.MUSEO:
-      return '#4ecdc4'; // Turquesa
-    case Categoria.GOBIERNO:
-      return '#45b7d1'; // Azul
-    case Categoria.ESTADIO:
-      return '#96ceb4'; // Verde claro
-    case Categoria.MONUMENTO:
-      return '#f7b731'; // Amarillo/Dorado
-    default:
-      return '#f0f0f0'; // Gris por defecto
-  }
+  return CATEGORIA_COLORES[categoria] || '#f0f0f0'; // Gris por defecto
 };
 
 /**
