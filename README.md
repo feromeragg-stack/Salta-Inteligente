@@ -1,7 +1,7 @@
 # 🌱 Salta-Verde (Salta-Inteligente)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/M%C3%B3dulo%25203-En%2520Progreso-yellow%3Fstyle%3Dfor-the-badge" alt="Estado del Proyecto: Módulo 3 en Progreso">
+  <img src="https://img.shields.io/badge/Módulo%203-En%20Progreso-yellow?style=for-the-badge" alt="Estado del Proyecto: Módulo 3 en Progreso">
 </p>
 
 <p align="center">
