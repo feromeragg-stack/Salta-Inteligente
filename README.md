@@ -50,7 +50,7 @@ La aplicación ha sido refactorizada como una **Single Page Application (SPA)** 
 ### ⚙️ **Backend y API**
 
 - ✅ **API RESTful**: Backend robusto en Node.js/Express para servir los datos de los puntos verdes.
-- ✅ **Base de Datos Relacional**: Conectado a PostgreSQL y gestionado con Prisma ORM.
+- ✅ **Base de Datos Relacional**: Conectado a SQLite (desarrollo) y compatible con PostgreSQL (producción) gestionado con Prisma ORM.
 - ✅ **Datos de Prueba (seed)**: Script de seeding para poblar la base de datos con puntos de composta y reciclaje.
 
 ---
@@ -136,7 +136,13 @@ Sigue estos pasos para ejecutar el proyecto manualmente en tu máquina.
 
    Regresa a la carpeta `/server`.
    Crea un archivo `.env` (puedes duplicar `.env.example` si existe).
-   Añade tu variable de entorno de PostgreSQL:
+   Para desarrollo con SQLite (por defecto):
+
+   ```env
+   DATABASE_URL="file:./dev.db"
+   ```
+
+   Para producción con PostgreSQL (opcional):
 
    ```env
    DATABASE_URL="postgresql://user:password@host:port/database"
