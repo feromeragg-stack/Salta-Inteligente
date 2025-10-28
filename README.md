@@ -1,17 +1,21 @@
 # 🌱 Salta-Verde (Salta-Inteligente)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Estado-Completamente%20Funcional-green?style=for-the-badge" alt="Estado del Proyecto: Completamente Funcional">
+  <img src="https://img.shields.io/badge/M%C3%B3dulo%25203-En%2520Progreso-yellow%3Fstyle%3Dfor-the-badge" alt="Estado del Proyecto: Módulo 3 en Progreso">
 </p>
 
 <p align="center">
-  Una aplicación web full-stack ecológica diseñada para conectar a los ciudadanos de Salta con puntos verdes de compostaje y reciclaje. Combina un mapa interactivo, filtros inteligentes, información educativa y desafíos ambientales para promover la sustentabilidad urbana.
+  Una aplicación web full-stack de código abierto diseñada para fomentar la cultura ambiental y la participación ciudadana en Salta, Argentina.
+</p>
+
+<p align="center">
+  Combina una herramienta cívica (mapa interactivo de puntos verdes) con un sistema de gamificación (Eco-Retos) para promover la sustentabilidad urbana.
 </p>
 
 <p align="center">
   <a href="#-instalación-y-uso-local"><strong>Instalación Local »</strong></a>
   ·
-  <a href="https://github.com/feromeragg-stack/salta-inteligente/issues">Reportar un Bug</a>
+  <a href="https://github.com/feromeragg-stack/Salta-Inteligente/issues">Reportar un Bug</a>
   ·
   <a href="#-contribuir">Contribuir al Proyecto</a>
 </p>
@@ -21,39 +25,33 @@
 ## 📸 Vista Previa del Proyecto
 
 <p align="center">
-  <img width="1338" height="785" alt="Salta-Verde - Mapa Ecológico Interactivo" src="https://github.com/user-attachments/assets/9a9071da-f9ff-470a-bdc4-eb0ec36dfc14" />
+  <img width="100%" alt="Salta-Verde - Mapa Ecológico Interactivo" src="https://media.discordapp.net/attachments/1432570665424130068/1432574752530370750/Captura_de_pantalla_2025-10-28_003941.png?ex=69018cb4&is=69003b34&hm=88eccccd77023da216529769b28f117445f71e5be7d085c0ae899f32c4453189&=&format=webp&quality=lossless" />
 </p>
 
-_Mapa interactivo de **Salta-Verde** mostrando los 8 puntos ecológicos de la ciudad: 6 centros de compostaje (🌱) y 2 puntos de reciclaje (♻️) con filtros, popups informativos y navegación fluida_
+_La aplicación "Salta-Verde" mostrando el mapa interactivo, los filtros de categorías y el panel informativo con detalles sobre los puntos de compostaje y reciclaje._
 
 ---
 
 ## ✨ Funcionalidades Implementadas
 
-### 🗺️ **Módulo 1: Mapa Interactivo de Puntos Ecológicos**
+La aplicación ha sido refactorizada como una **Single Page Application (SPA)** utilizando `react-router-dom` para una navegación fluida y profesional.
 
-- ✅ **Mapa dinámico** con tecnología Leaflet y React Router
-- ✅ **8 puntos verdes georreferenciados** reales de Salta
-- ✅ **Categorización visual** con colores distintivos:
-  - � **COMPOSTA** (verde turquesa) - Puntos de compostaje comunitario
-  - 🟠 **RECICLAJE** (naranja) - Centros de acopio de materiales secos
-- ✅ **Filtros interactivos** con checkboxes en tiempo real
-- ✅ **Popups informativos** con detalles educativos de cada punto
-- ✅ **API REST** completa con endpoints especializados
+### 🗺️ **Sección "Inicio" (Mapa Interactivo)**
 
-### � **Módulo 2: Panel Educativo Interactivo**
+- ✅ **Mapa Dinámico**: Visualización (`react-leaflet`) de puntos ecológicos (Composta y Reciclaje).
+- ✅ **Filtros por Categoría**: Filtra marcadores en tiempo real (Puntos de Composta / Puntos de Reciclaje).
+- ✅ **Iconos Personalizados**: Iconos (`react-icons`) y colores distintivos para cada categoría.
+- ✅ **Panel Informativo**: Columna lateral que educa al usuario sobre qué SÍ y NO llevar a cada tipo de punto.
 
-- ✅ **Cards informativas** sobre compostaje y reciclaje
-- ✅ **Guías prácticas** de qué SÍ y NO llevar a cada punto
-- ✅ **Layout responsive** adaptable a móviles y desktop
-- ✅ **Diseño modular** con componentes reutilizables
+### 🎯 **Sección "Desafíos" (Gamificación)**
 
-### 🎯 **Módulo 3: Sistema de Desafíos Ambientales**
+- ✅ **Base de Eco-Retos**: Página dedicada que sirve como base para el sistema de desafíos semanales (próximo módulo a desarrollar).
 
-- ✅ **Desafíos semanales** eco-ambientales gamificados
-- ✅ **Sistema de puntos** e insignias motivacionales
-- ✅ **Navegación fluida** entre páginas con React Router
-- ✅ **Interfaz moderna** con iconos y estilos consistentes
+### ⚙️ **Backend y API**
+
+- ✅ **API RESTful**: Backend robusto en Node.js/Express para servir los datos de los puntos verdes.
+- ✅ **Base de Datos Relacional**: Conectado a PostgreSQL y gestionado con Prisma ORM.
+- ✅ **Datos de Prueba (seed)**: Script de seeding para poblar la base de datos con puntos de composta y reciclaje.
 
 ---
 
@@ -84,134 +82,113 @@ _Mapa interactivo de **Salta-Verde** mostrando los 8 puntos ecológicos de la ci
 
 ### Bibliotecas Principales
 
-- **Frontend**: `react-leaflet`, `react-router-dom`, `react-icons`, `css-modules`
-- **Backend**: `express`, `cors`, `tsx`, `concurrently`
-- **ORM**: `prisma` con migraciones versionadas y seeding automático
-- **Mapas**: `leaflet` para visualización interactiva de puntos ecológicos
+- **Frontend**: `react-leaflet`, `react-router-dom`, `react-icons`, `axios`, `css-modules`
+- **Backend**: `express`, `cors`, `tsx`
+- **ORM**: `prisma` con migraciones y script de seeding.
+- **Mapas**: `leaflet`
 
 ---
 
 ## 🏛️ Principios de Arquitectura
 
-Este proyecto sigue estrictamente los estándares de la industria para garantizar código limpio, escalable y mantenible:
+Este proyecto sigue estándares de la industria para garantizar código limpio, escalable y mantenible:
 
-- **🏗️ Arquitectura Full-Stack Monorepo**: Organización clara con carpetas `client` y `server`
-- **🔄 Separación de Responsabilidades**: Patrón `Ruta → Controlador → Servicio → ORM`
-- **📝 TypeScript End-to-End**: Tipado estático en frontend y backend
-- **🌐 API RESTful**: Endpoints bien definidos y documentados
-- **🗄️ Base de Datos Relacional**: Modelo unificado con seeding automatizado
-- **📦 Gestión de Estado**: React hooks para manejo eficiente del estado
+- **🏗️ Arquitectura Full-Stack Monorepo**: Organización clara con carpetas `client` y `server`.
+- **🔄 Separación de Responsabilidades (SoC)**: Patrón de backend `Ruta → Controlador → Servicio → ORM`.
+- **📝 TypeScript End-to-End**: Tipado estático en frontend y backend.
+- **📦 Arquitectura Basada en Componentes**: Frontend con Layout y Pages gestionado por `react-router-dom`.
 
 ---
 
 ## 🚀 Instalación y Uso Local
 
-### **Prerrequisitos**
+Sigue estos pasos para ejecutar el proyecto manualmente en tu máquina.
 
-```bash
-node >= 18.0.0
-npm >= 9.0.0
-```
+### Prerrequisitos
 
-### **Instalación Rápida**
+- Node.js (v18+)
+- npm
 
-1. **Clonar el repositorio**
+### Instalación Manual
+
+1. **Clonar el repositorio:**
 
    ```bash
-   git clone https://github.com/feromeragg-stack/salta-inteligente.git
-   cd salta-inteligente
+   git clone https://github.com/feromeragg-stack/Salta-Inteligente.git
+   cd Salta-Inteligente
    ```
 
-2. **Instalar todas las dependencias**
+2. **Instalar dependencias del Backend:**
 
    ```bash
-   npm run install:all
+   cd server
+   npm install
    ```
 
-3. **Configurar la base de datos**
+3. **Instalar dependencias del Frontend:**
 
    ```bash
-   npm run db:setup
+   cd ../client
+   npm install
    ```
 
-4. **Iniciar el servidor de desarrollo**
+4. **Configurar la Base de Datos (Backend):**
+
+   Regresa a la carpeta `/server`.
+   Crea un archivo `.env` (puedes duplicar `.env.example` si existe).
+   Añade tu variable de entorno de PostgreSQL:
+
+   ```env
+   DATABASE_URL="postgresql://user:password@host:port/database"
+   ```
+
+5. **Aplicar Migraciones y Seeding (Backend):**
+
+   Este comando reiniciará la base de datos, aplicará el `schema.prisma` y ejecutará el `seed.ts` para poblarla.
 
    ```bash
+   npx prisma migrate reset
+   ```
+
+6. **Ejecutar los servidores:**
+
+   **Terminal 1 (Backend):**
+   ```bash
+   cd server
    npm run dev
    ```
 
-5. **¡Listo!** Abre tu navegador en:
-   - 🌐 **Frontend**: http://localhost:5173
-   - 🔗 **API Backend**: http://localhost:3001
+   **Terminal 2 (Frontend):**
+   ```bash
+   cd client
+   npm run dev
+   ```
 
-### **Configuración Manual (Alternativa)**
-
-<details>
-<summary>Click para ver pasos detallados</summary>
-
-#### Backend
-
-```bash
-cd server
-npm install
-cp .env.example .env
-npx prisma migrate dev
-npx prisma generate
-npm run dev
-```
-
-#### Frontend
-
-```bash
-cd client
-npm install
-npm run dev
-```
-
-</details>
-
----
-
-## 📊 API Endpoints
-
-### **Endpoints Principales**
-
-```http
-GET /api/puntos                      # Obtener todos los puntos ecológicos
-GET /api/puntos?tipo=COMPOSTA       # Filtrar por tipo de punto
-GET /api/puntos?tipo=RECICLAJE      # Solo puntos de reciclaje
-GET /health                         # Health check del servidor
-```
-
-### **Tipos de Puntos Ecológicos**
-
-- `COMPOSTA` - Puntos de compostaje comunitario
-- `RECICLAJE` - Centros de reciclaje y contenedores especializados
-- `MONUMENTO` - Monumentos históricos y religiosos
+7. Abre `http://localhost:5173` (o el puerto que indique Vite) en tu navegador.
 
 ---
 
 ## 📍 Datos Incluidos
 
-El proyecto incluye **8 puntos ecológicos reales** de la ciudad de Salta:
+El script de seeding (`seed.ts`) puebla la base de datos con **8 puntos ecológicos reales** de la ciudad de Salta para pruebas:
 
 <details>
 <summary><strong>🌱 Puntos de Compostaje (6 puntos)</strong></summary>
 
-- **Parque San Martín** - Centro de compostaje comunitario con talleres educativos
-- **Plaza 9 de Julio** - Composteras urbanas para residuos orgánicos
-- **Parque Belgrano** - Sistema de compostaje para el barrio
-- **Plaza Güemes** - Punto de compostaje histórico con educación ambiental
-- **Costanera Norte** - Compostaje junto al río con vista panorámica
-- **Barrio Grand Bourg** - Centro comunitario de compostaje residencial
+- **Compostera Comunitaria "El Ceibo"**
+- **Centro Vecinal "Tres Cerritos"**
+- **Iniciativa "Tierra Viva" (Parque San Martín)**
+- **Compostera "Norte Verde"**
+- **Plaza "Alvarado" - Punto Orgánico**
+- **Huerta y Compost "Grand Bourg"**
 
 </details>
 
 <details>
 <summary><strong>♻️ Puntos de Reciclaje (2 puntos)</strong></summary>
 
-- **Centro de Reciclaje Municipal** - Separación y procesamiento de materiales reciclables
-- **EcoPunto Microcentro** - Contenedores inteligentes para reciclaje urbano
+- **Punto Verde "COPROMAS" (Centro)**
+- **Cooperativa "Reciclando Futuro"**
 
 </details>
 
@@ -220,111 +197,71 @@ El proyecto incluye **8 puntos ecológicos reales** de la ciudad de Salta:
 ## 🏗️ Arquitectura del Proyecto
 
 ```
-salta-inteligente/
-├── 📁 client/                    # Frontend React + TypeScript
+salta-verde/
+├── 📁 client/                # Frontend (React + TypeScript + Vite)
 │   ├── 📁 src/
-│   │   ├── 📁 components/       # Componentes React reutilizables
-│   │   │   ├── 📁 layout/       # Layout y navegación
-│   │   │   ├── 📁 ui/           # Componentes UI básicos
-│   │   │   └── MapaCivico.tsx   # Componente principal del mapa
-│   │   ├── 📁 services/         # Servicios HTTP y API calls
-│   │   ├── 📁 types/           # Definiciones TypeScript
-│   │   └── main.tsx            # Punto de entrada
-│   ├── package.json
-│   └── vite.config.ts
-├── 📁 server/                   # Backend Node.js + Express
+│   │   ├── 📁 components/     # Componentes React reutilizables
+│   │   │   ├── 📁 FiltroCategorias/
+│   │   │   ├── 📁 InfoPuntos/
+│   │   │   ├── 📁 layout/
+│   │   │   └── 📁 MapaCivico/
+│   │   ├── 📁 pages/         # Páginas (Rutas de React Router)
+│   │   │   ├── DesafiosPage.tsx
+│   │   │   └── HomePage.tsx
+│   │   ├── 📁 services/      # Llamadas a la API (axios)
+│   │   ├── 📁 types/         # Definiciones TypeScript
+│   │   ├── App.tsx          # Definición de Rutas
+│   │   └── main.tsx         # Punto de entrada (React Router)
+│   └── package.json
+├── 📁 server/                # Backend (Node.js + Express)
 │   ├── 📁 src/
 │   │   ├── 📁 api/
-│   │   │   ├── 📁 controllers/ # Lógica de controladores
-│   │   │   ├── 📁 routes/      # Definición de rutas
-│   │   │   └── 📁 services/    # Lógica de negocio
-│   │   ├── 📁 config/          # Configuración del servidor
-│   │   └── server.ts           # Servidor principal
+│   │   │   ├── 📁 controllers/
+│   │   │   ├── 📁 routes/
+│   │   │   └── 📁 services/
+│   │   ├── 📁 config/        # Configuración (Prisma Client)
+│   │   ├── app.ts           # Configuración de Express
+│   │   └── server.ts        # Punto de entrada
 │   ├── 📁 prisma/
-│   │   ├── schema.prisma       # Esquema de base de datos
-│   │   ├── 📁 migrations/      # Migraciones versionadas
-│   │   └── seed.ts             # Datos de prueba
+│   │   ├── schema.prisma    # Esquema de base de datos
+│   │   ├── 📁 migrations/
+│   │   └── seed.ts          # Script de datos de prueba
 │   └── package.json
-├── package.json                # Scripts del proyecto raíz
-├── README.md                   # Esta documentación
-└── LICENSE                     # Licencia MIT
+├── package.json             # Scripts del proyecto raíz
+└── README.md                # Esta documentación
 ```
 
 ---
 
 ## 🤝 Contribuir
 
-¡Las contribuciones son bienvenidas! Este proyecto sigue el flujo de trabajo estándar de GitHub.
+¡Las contribuciones son bienvenidas!
 
-### **Proceso de Contribución**
+1. Fork el proyecto.
+2. Crea una rama para tu feature (`git checkout -b feature/NuevaFuncionalidad`).
+3. Commit tus cambios (`git commit -m 'feat: Agrega nueva funcionalidad'`).
+4. Push a la rama (`git push origin feature/NuevaFuncionalidad`).
+5. Abre un Pull Request.
 
-1. **Fork** el proyecto
-2. **Crea** una rama para tu feature
-   ```bash
-   git checkout -b feature/NuevaFuncionalidad
-   ```
-3. **Commit** tus cambios
-   ```bash
-   git commit -m 'feat: Agregar nueva funcionalidad increíble'
-   ```
-4. **Push** a la rama
-   ```bash
-   git push origin feature/NuevaFuncionalidad
-   ```
-5. **Abre** un Pull Request
-
-### **Estilo de Commits**
-
-Utilizamos [Conventional Commits](https://www.conventionalcommits.org/):
-
-- `feat:` nueva funcionalidad
-- `fix:` corrección de bugs
-- `docs:` documentación
-- `style:` formateo, punto y coma, etc.
-- `refactor:` refactoring de código
-- `test:` agregar tests
-
-### **Issues y Bugs**
-
-- 🐛 [Reportar un bug](https://github.com/feromeragg-stack/salta-inteligente/issues/new?labels=bug)
-- 💡 [Solicitar una funcionalidad](https://github.com/feromeragg-stack/salta-inteligente/issues/new?labels=enhancement)
+Utilizamos [Conventional Commits](https://www.conventionalcommits.org/) para los mensajes de commit (ej: `feat:`, `fix:`, `docs:`, `refactor:`).
 
 ---
 
-## 📈 Roadmap y Próximas Mejoras
+## 🗺️ Hoja de Ruta (Roadmap)
 
-### **🎯 Mejoras Inmediatas**
-
-- [x] Sistema de filtros interactivo por tipo de punto ecológico
-- [x] Iconos diferenciados para compostaje y reciclaje
-- [x] Navegación entre páginas con React Router
-- [x] Paneles informativos sobre sostenibilidad
-- [ ] Búsqueda de puntos ecológicos por ubicación
-- [ ] Modo oscuro/claro
-
-### **🚀 Funcionalidades Avanzadas**
-
-- [ ] Sistema de desafíos ambientales semanales
-- [ ] Calculadora de huella de carbono personal
-- [ ] Geolocalización para encontrar el punto más cercano
-- [ ] PWA (Progressive Web App) para acceso offline
-- [ ] Gamificación con puntos por acciones ecológicas
-- [ ] Sistema de notificaciones para recordatorios ambientales
-- [ ] Compartir logros ecológicos en redes sociales
-
-### **🏗️ Mejoras Técnicas**
-
-- [ ] Tests unitarios y de integración
-- [ ] Deployment automatizado con CI/CD
-- [ ] Optimización de rendimiento con cache
-- [ ] Accesibilidad web (WCAG 2.1)
-- [ ] Lighthouse score 90+
+| Módulo | Funcionalidad | Estado |
+|--------|---------------|---------|
+| **Módulo 1** | Mapa Interactivo y Filtros | ✅ **Completado** |
+| **Módulo 2** | Navegación (SPA) y Layout | ✅ **Completado** |
+| **Módulo 3** | Desafíos Interactivos (Gamificación) | ⏳ **En Progreso** |
+| **Módulo 4** | Autenticación y Perfiles de Usuario | 🔜 **Próximamente** |
+| **Módulo 5** | Sistema de Insignias y Recompensas | 🔜 **Próximamente** |
 
 ---
 
 ## 📝 Licencia
 
-Este proyecto está licenciado bajo la **Licencia MIT** - ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está licenciado bajo la **Licencia MIT**.
 
 ---
 
@@ -332,26 +269,13 @@ Este proyecto está licenciado bajo la **Licencia MIT** - ver el archivo [LICENS
 
 **Fernando J. Romera Costa**
 
-- 💼 **LinkedIn**: [fernando-romera-033558384](https://www.linkedin.com/in/fernando-romera-033558384/)
 - 🐙 **GitHub**: [@feromeragg-stack](https://github.com/feromeragg-stack)
-- 📧 **Email**: [feromeragg@gmail.com]
-- 🌐 **Proyecto**: [Salta-Verde](https://github.com/feromeragg-stack/salta-inteligente)
-
----
-
-## 🙏 Agradecimientos
-
-- 🏛️ **Ciudad de Salta** por inspirar este proyecto
-- 📚 **Comunidad open source** por las increíbles herramientas
+- 💼 **LinkedIn**: [fernando-romera-033558384](https://www.linkedin.com/in/fernando-romera-033558384/)
 
 ---
 
 <div align="center">
 
-### ⭐ ¡Si este proyecto te resulta útil, dale una estrella!
-
-**¿Encontraste algún problema?** [Repórtalo aquí](https://github.com/feromeragg-stack/salta-inteligente/issues)
-
-**¿Quieres contribuir?** [Lee la guía de contribución](#-contribuir)
+### ⭐ ¡Si este proyecto te resulta útil, dale una estrella! ⭐
 
 </div>
