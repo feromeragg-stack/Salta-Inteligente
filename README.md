@@ -1,11 +1,11 @@
-# 🚀 Salta-Inteligente
+# 🌱 Salta-Verde (Salta-Inteligente)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Estado-En%20Desarrollo-blue?style=for-the-badge" alt="Estado del Proyecto: En Desarrollo">
+  <img src="https://img.shields.io/badge/Estado-Completamente%20Funcional-green?style=for-the-badge" alt="Estado del Proyecto: Completamente Funcional">
 </p>
 
 <p align="center">
-  Una aplicación web full-stack de código abierto diseñada para ser un panel cívico centralizado para los ciudadanos de Salta, Argentina. El objetivo es crear una herramienta de alto impacto local que sirva como una pieza central de portafolio, demostrando habilidades técnicas avanzadas en el desarrollo de software moderno.
+  Una aplicación web full-stack ecológica diseñada para conectar a los ciudadanos de Salta con puntos verdes de compostaje y reciclaje. Combina un mapa interactivo, filtros inteligentes, información educativa y desafíos ambientales para promover la sustentabilidad urbana.
 </p>
 
 <p align="center">
@@ -21,36 +21,39 @@
 ## 📸 Vista Previa del Proyecto
 
 <p align="center">
-  <img width="1338" height="785" alt="Captura_de_pantalla_2025-10-21_160925" src="https://github.com/user-attachments/assets/9a9071da-f9ff-470a-bdc4-eb0ec36dfc14" />
-
-
-">
+  <img width="1338" height="785" alt="Salta-Verde - Mapa Ecológico Interactivo" src="https://github.com/user-attachments/assets/9a9071da-f9ff-470a-bdc4-eb0ec36dfc14" />
 </p>
 
-_Mapa interactivo mostrando los puntos de interés de Salta con categorización visual y popups informativos_
+_Mapa interactivo de **Salta-Verde** mostrando los 8 puntos ecológicos de la ciudad: 6 centros de compostaje (🌱) y 2 puntos de reciclaje (♻️) con filtros, popups informativos y navegación fluida_
 
 ---
 
 ## ✨ Funcionalidades Implementadas
 
-### 🗺️ **Módulo 1: Mapa Interactivo de Puntos de Interés**
+### 🗺️ **Módulo 1: Mapa Interactivo de Puntos Ecológicos**
 
-- ✅ **Mapa dinámico** con tecnología Leaflet
-- ✅ **13 puntos georreferenciados** reales de Salta
+- ✅ **Mapa dinámico** con tecnología Leaflet y React Router
+- ✅ **8 puntos verdes georreferenciados** reales de Salta
 - ✅ **Categorización visual** con colores distintivos:
-  - 🛍️ **FERIAS** (rojo) - Mercados y ferias artesanales
-  - 🏛️ **MUSEOS** (turquesa) - Instituciones culturales
-  - 🏛️ **GOBIERNO** (azul) - Edificios gubernamentales
-  - ⚽ **ESTADIOS** (verde) - Centros deportivos
-  - 🏛️ **MONUMENTOS** (dorado) - Patrimonio histórico
-- ✅ **Popups informativos** con detalles de cada ubicación
-- ✅ **API REST** completa con filtros por categoría
+  - � **COMPOSTA** (verde turquesa) - Puntos de compostaje comunitario
+  - 🟠 **RECICLAJE** (naranja) - Centros de acopio de materiales secos
+- ✅ **Filtros interactivos** con checkboxes en tiempo real
+- ✅ **Popups informativos** con detalles educativos de cada punto
+- ✅ **API REST** completa con endpoints especializados
 
-### 🚧 **Roadmap de Módulos Futuros**
+### � **Módulo 2: Panel Educativo Interactivo**
 
-- 📅 **Módulo 2: Agenda Cultural Unificada** (Planificado)
-- 📝 **Módulo 3: Reportes Ciudadanos** (Planificado)
-- 🚌 **Módulo 4: Tracker de Transporte Público** (Planificado)
+- ✅ **Cards informativas** sobre compostaje y reciclaje
+- ✅ **Guías prácticas** de qué SÍ y NO llevar a cada punto
+- ✅ **Layout responsive** adaptable a móviles y desktop
+- ✅ **Diseño modular** con componentes reutilizables
+
+### 🎯 **Módulo 3: Sistema de Desafíos Ambientales**
+
+- ✅ **Desafíos semanales** eco-ambientales gamificados
+- ✅ **Sistema de puntos** e insignias motivacionales
+- ✅ **Navegación fluida** entre páginas con React Router
+- ✅ **Interfaz moderna** con iconos y estilos consistentes
 
 ---
 
@@ -63,6 +66,7 @@ _Mapa interactivo mostrando los puntos de interés de Salta con categorización 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
 ### Backend
 
@@ -80,10 +84,10 @@ _Mapa interactivo mostrando los puntos de interés de Salta con categorización 
 
 ### Bibliotecas Principales
 
-- **Frontend**: `react-leaflet`, `axios`, `css-modules`
-- **Backend**: `express`, `cors`, `tsx`
-- **ORM**: `prisma` con migraciones versionadas
-- **Mapas**: `leaflet` para visualización interactiva
+- **Frontend**: `react-leaflet`, `react-router-dom`, `react-icons`, `css-modules`
+- **Backend**: `express`, `cors`, `tsx`, `concurrently`
+- **ORM**: `prisma` con migraciones versionadas y seeding automático
+- **Mapas**: `leaflet` para visualización interactiva de puntos ecológicos
 
 ---
 
@@ -173,72 +177,41 @@ npm run dev
 ### **Endpoints Principales**
 
 ```http
-GET /api/puntos                    # Obtener todos los puntos
-GET /api/puntos?categoria=FERIA    # Filtrar por categoría
-GET /health                        # Health check del servidor
+GET /api/puntos                      # Obtener todos los puntos ecológicos
+GET /api/puntos?tipo=COMPOSTA       # Filtrar por tipo de punto
+GET /api/puntos?tipo=RECICLAJE      # Solo puntos de reciclaje
+GET /health                         # Health check del servidor
 ```
 
-### **Endpoints de Compatibilidad**
+### **Tipos de Puntos Ecológicos**
 
-```http
-GET /api/ferias                    # Solo ferias
-GET /api/puntos-interes           # Todo excepto ferias
-```
-
-### **Categorías Disponibles**
-
-- `FERIA` - Mercados y ferias artesanales
-- `MUSEO` - Museos e instituciones culturales
-- `GOBIERNO` - Edificios gubernamentales
-- `ESTADIO` - Centros deportivos
+- `COMPOSTA` - Puntos de compostaje comunitario
+- `RECICLAJE` - Centros de reciclaje y contenedores especializados
 - `MONUMENTO` - Monumentos históricos y religiosos
 
 ---
 
 ## 📍 Datos Incluidos
 
-El proyecto incluye **13 puntos de interés reales** de la ciudad de Salta:
+El proyecto incluye **8 puntos ecológicos reales** de la ciudad de Salta:
 
 <details>
-<summary><strong>🛍️ Ferias (3 puntos)</strong></summary>
+<summary><strong>🌱 Puntos de Compostaje (6 puntos)</strong></summary>
 
-- **Feria Artesanal del Cerro San Bernardo** - Productos tradicionales salteños
-- **Mercado San Miguel** - Mercado histórico con productos regionales
-- **Feria de la Plaza 9 de Julio** - Emprendedores locales fines de semana
+- **Parque San Martín** - Centro de compostaje comunitario con talleres educativos
+- **Plaza 9 de Julio** - Composteras urbanas para residuos orgánicos
+- **Parque Belgrano** - Sistema de compostaje para el barrio
+- **Plaza Güemes** - Punto de compostaje histórico con educación ambiental
+- **Costanera Norte** - Compostaje junto al río con vista panorámica
+- **Barrio Grand Bourg** - Centro comunitario de compostaje residencial
 
 </details>
 
 <details>
-<summary><strong>🏛️ Museos (3 puntos)</strong></summary>
+<summary><strong>♻️ Puntos de Reciclaje (2 puntos)</strong></summary>
 
-- **Museo de Arqueología de Alta Montaña (MAAM)** - Niños del Llullaillaco
-- **Museo de la Ciudad Casa de Hernández** - Historia de Salta
-- **Museo Provincial de Bellas Artes** - Arte argentino y salteño
-
-</details>
-
-<details>
-<summary><strong>🏛️ Gobierno (2 puntos)</strong></summary>
-
-- **Casa de Gobierno** - Poder Ejecutivo Provincial
-- **Municipalidad de Salta** - Gobierno municipal
-
-</details>
-
-<details>
-<summary><strong>⚽ Estadios (2 puntos)</strong></summary>
-
-- **Estadio Padre Ernesto Martearena** - Estadio principal de la ciudad
-- **Complejo Deportivo Delmi** - Centro deportivo municipal
-
-</details>
-
-<details>
-<summary><strong>🏛️ Monumentos (3 puntos)</strong></summary>
-
-- **Catedral Basílica de Salta** - Sede del Arzobispado
-- **Iglesia San Francisco** - Torre campanario histórica
-- **Cabildo de Salta** - Edificio colonial del siglo XVIII
+- **Centro de Reciclaje Municipal** - Separación y procesamiento de materiales reciclables
+- **EcoPunto Microcentro** - Contenedores inteligentes para reciclaje urbano
 
 </details>
 
@@ -322,28 +295,29 @@ Utilizamos [Conventional Commits](https://www.conventionalcommits.org/):
 
 ### **🎯 Mejoras Inmediatas**
 
-- [ ] Iconos personalizados por categoría en el mapa
-- [ ] Panel de filtros interactivo para categorías
-- [ ] Búsqueda de puntos por nombre
-- [ ] Vista de lista complementaria al mapa
+- [x] Sistema de filtros interactivo por tipo de punto ecológico
+- [x] Iconos diferenciados para compostaje y reciclaje
+- [x] Navegación entre páginas con React Router
+- [x] Paneles informativos sobre sostenibilidad
+- [ ] Búsqueda de puntos ecológicos por ubicación
 - [ ] Modo oscuro/claro
 
 ### **🚀 Funcionalidades Avanzadas**
 
-- [ ] Información extendida con fotos e horarios
-- [ ] Geolocalización del usuario
-- [ ] Cálculo de rutas entre puntos de interés
-- [ ] PWA (Progressive Web App)
-- [ ] Notificaciones push para eventos
-- [ ] Sistema de favoritos
-- [ ] Compartir ubicaciones en redes sociales
+- [ ] Sistema de desafíos ambientales semanales
+- [ ] Calculadora de huella de carbono personal
+- [ ] Geolocalización para encontrar el punto más cercano
+- [ ] PWA (Progressive Web App) para acceso offline
+- [ ] Gamificación con puntos por acciones ecológicas
+- [ ] Sistema de notificaciones para recordatorios ambientales
+- [ ] Compartir logros ecológicos en redes sociales
 
 ### **🏗️ Mejoras Técnicas**
 
 - [ ] Tests unitarios y de integración
-- [ ] Deployment automatizado
-- [ ] Cache de API con Redis
-- [ ] Optimización de imágenes
+- [ ] Deployment automatizado con CI/CD
+- [ ] Optimización de rendimiento con cache
+- [ ] Accesibilidad web (WCAG 2.1)
 - [ ] Lighthouse score 90+
 
 ---
@@ -361,7 +335,7 @@ Este proyecto está licenciado bajo la **Licencia MIT** - ver el archivo [LICENS
 - 💼 **LinkedIn**: [fernando-romera-033558384](https://www.linkedin.com/in/fernando-romera-033558384/)
 - 🐙 **GitHub**: [@feromeragg-stack](https://github.com/feromeragg-stack)
 - 📧 **Email**: [feromeragg@gmail.com]
-- 🌐 **Proyecto**: [Salta-Inteligente](https://github.com/feromeragg-stack/salta-inteligente)
+- 🌐 **Proyecto**: [Salta-Verde](https://github.com/feromeragg-stack/salta-inteligente)
 
 ---
 
