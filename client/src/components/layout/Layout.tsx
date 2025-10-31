@@ -22,7 +22,7 @@ const Layout: React.FC = () => {
               isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
             }
           >
-            Inicio
+            🏠 Inicio
           </NavLink>
           <NavLink
             to="/desafios"
@@ -30,7 +30,15 @@ const Layout: React.FC = () => {
               isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
             }
           >
-            Desafíos
+            🎯 Desafíos
+          </NavLink>
+          <NavLink
+            to="/noticias"
+            className={({ isActive }) =>
+              isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+            }
+          >
+            📰 Noticias
           </NavLink>
         </nav>
       </header>

@@ -2,6 +2,7 @@ import { Router } from 'express';
 import feriasRouter from './ferias.routes';
 import puntosInteresRouter from './puntos-interes.routes';
 import puntosRouter from './puntos.routes';
+import noticiasRouter from './noticias';
 
 // Crear una instancia del enrutador principal
 const router = Router();
@@ -17,6 +18,9 @@ router.use('/puntos', puntosRouter);
 // Enrutadores de compatibilidad (mantienen las APIs existentes)
 router.use('/ferias', feriasRouter);
 router.use('/puntos-interes', puntosInteresRouter);
+
+// Módulo de Noticias Ambientales
+router.use('/noticias', noticiasRouter);
 
 // TODO: Aquí se montarán otros módulos futuros:
 // router.use('/eventos', eventosRouter);    // Módulo 2: Agenda Cultural
